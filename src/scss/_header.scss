@@ -1,0 +1,53 @@
+// =====================================
+// Header
+// =====================================
+
+.header{
+  @include element(container){
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:$header-colour;
+    z-index:100;
+    box-shadow:2px 2px 15px #333333;
+
+  }
+
+  @include element(content){
+    position:relative;
+    padding:0.5em;
+  }
+
+  @include element(title){
+    padding:0;
+    margin:0;
+    color:$white;
+    text-align:center;
+  }
+  @include element(button){
+    text-decoration:none;
+    color:$white;
+    position:absolute;
+    border-radius:100%;
+    border:1px solid $brand-primary;
+    background-color: $brand-primary;
+    text-align:center;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    font-size:2em;
+    top:50%;
+    right:0.25em;
+    transform:translateY(-50%);
+    @include media-query(sm){
+      bottom:0;
+      right:1em;
+      top:auto;
+      transform:translateY(50%);
+    }
+    &:hover{
+      background-color: darken($brand-primary,15%);
+    }
+  }
+}

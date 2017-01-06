@@ -1,0 +1,19 @@
+// =====================================
+// Fonts
+// =====================================
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700');
+
+// =====================================
+// Settings
+// =====================================
+$brand-primary:#FE654F;
+$brand-secondary:#D6EFFF;
+$header-colour:#F1C40F;
+$text-colour:#333333;
+$white:#ffffff;
+$black:#000000;
+$border-colour:#cbcbcb;
+$bg-foreground: lighten($brand-primary,10%);
+$bg-background: $brand-secondary;
+$screen-sm: 32em;
+$screen-md: 64.063em;

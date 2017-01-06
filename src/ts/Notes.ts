@@ -14,7 +14,7 @@ class Notes {
   colourSet:Array<Object>;
   constructor(obj:NotesOptions = {} as NotesOptions){
     let {
-      startingId = 0,
+      startingId = 1,
       idPrefix = 'note',
       colourSet = [
         {'label': 'pale', 'value':'#FEFEFF'},

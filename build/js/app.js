@@ -178,6 +178,8 @@
 	        var note = new Note_1.default({ idPrefix: this.idPrefix, colourSet: this.colourSet });
 	        this.notesContainer.insertBefore(note.createNote({ id: this.id }), this.notesContainer.childNodes[0]);
 	        this.id += 1;
+	        if (event) event.preventDefault();
+	        return false;
 	    };
 	    return Notes;
 	}();

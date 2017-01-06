@@ -10,7 +10,6 @@ class Notes {
   notesContainer:HTMLElement;
   btnAdd:HTMLElement;
   id:number;
-  noteId:string;
   idPrefix:string;
   colourSet:Array<Object>;
   constructor(obj:NotesOptions = {} as NotesOptions){

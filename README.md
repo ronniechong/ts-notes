@@ -14,9 +14,15 @@ Demo link: [https://ronniechong.github.io/ts-notes](https://ronniechong.github.i
 
 
 
-###Install dependencies
+###Install typings definitions and dependencies
+
+Install dependencies
 
 ```yarn install``` or ```npm install```
+
+Install typings definitions
+
+```typings install```
 
 ##Running the app
 

@@ -2,6 +2,8 @@
 
 Simple Notes app using Typescript and SCSS
 
+Demo link: [https://ronniechong.github.io/ts-notes](https://ronniechong.github.io/ts-notes)
+
 ##Installation
 
 ###Install Typescript and Typings
@@ -23,6 +25,6 @@ Simple Notes app using Typescript and SCSS
 npm run dev
 ```
 
-Open browser ```http://localhost:1337/``` to view 
+Open browser ```http://localhost:1337/``` to view
 
 

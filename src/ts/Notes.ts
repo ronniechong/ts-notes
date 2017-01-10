@@ -1,5 +1,5 @@
 import Note from './Note';
-import Store from './Store';
+import {initStore,getData} from './Store';
 import {Promise} from 'es6-promise';
 
 interface NotesOptions {
@@ -10,7 +10,7 @@ class Notes {
   notesContainer:HTMLElement;
   btnAdd:HTMLElement;
   colourSet:Array<Object>;
-  store:any;
+  //store:any;
   constructor(obj:NotesOptions = {} as NotesOptions){
     let {
       colourSet = [
@@ -25,12 +25,19 @@ class Notes {
     this.notesContainer  = document.getElementById('notes');
     this.btnAdd  = document.getElementById('btnAdd');
     this.btnAdd.addEventListener('click', this.addNote.bind(this), false);
-    this.store = new Store();
-    this.store.init();
-    Promise.all([this.store.getNotes()]).then((results)=>{
-      let a = results;
-      console.log('------');
-      console.log(a);
+    // this.store = new Store();
+    // this.store.init();
+    // Promise.all([this.store.getNotes()]).then((results)=>{
+    //   let a = results;
+    //   console.log('------');
+    //   console.log(a);
+    // });
+    initStore()
+    .then((result)=>{
+      if (result) {
+        console.log('!!!!');
+        console.log(getData());
+      }
     });
   }
 

@@ -1,25 +1,19 @@
-import {TimeStamp} from './Util';
+import {TimeStamp,GenerateId} from './Util';
 
 interface NoteOptions {
-  id?: number,
-  idPrefix?: string,
+  id?:string,
   colourSet?:Array<Object>
 }
 class Note {
-  id:number;
   noteId:string;
-  idPrefix:string;
   colourSet:Array<Object>;
 
   constructor(obj:NoteOptions){
-    this.id = 0;
     this.noteId = '';
-    this.idPrefix = obj.idPrefix;
     this.colourSet = obj.colourSet;
   }
 
   createNote(obj:NoteOptions){
-    this.id = obj.id;
     let container:HTMLElement = document.createElement('div');
     let button:HTMLElement = document.createElement('a');
     let title:HTMLElement = document.createElement('div');
@@ -28,7 +22,7 @@ class Note {
     let body:HTMLElement = document.createElement('div');
     let content:HTMLElement = document.createElement('div');
     let select:HTMLElement = document.createElement('select');
-    let id:string = `${this.idPrefix}${this.id}`;
+    let id:string = obj.id || GenerateId();
     let _this:Note = this;
 
     this.noteId = id;

@@ -14,8 +14,12 @@
     "preserveConstEnums": true,
     "suppressImplicitAnyIndexErrors": true,
     "module": "commonjs",
-    "sourceMap": true
+    "sourceMap": true,
+    "noResolve": true
   },
+  "types": [
+    "firebase"
+  ],
   "exclude": [
     "node_modules"
   ],
